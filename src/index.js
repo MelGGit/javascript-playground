@@ -1,17 +1,58 @@
 console.clear()
-const buttonRot = document.querySelector('.button-rot')
-const buttonBG = document.querySelector('.button-bg')
-const buttonRadius = document.querySelector('.button-radius')
-const box = document.querySelector('.box')
+const buttonOne = document.querySelector('.button1')
+const buttonTwo = document.querySelector('.button2')
+const buttonThree = document.querySelector('.button3')
+const buttonFour = document.querySelector('.button4')
 
-buttonRot.addEventListener('click', () => {
-  box.classList.toggle('rotation')
+const box1 = document.querySelector('.box1')
+const box2 = document.querySelector('.box2')
+const box3 = document.querySelector('.box3')
+const box4 = document.querySelector('.box4')
+
+buttonOne.addEventListener('click', () => {
+  box1.classList.add('visible')
+  box2.classList.remove('visible')
+  box3.classList.remove('visible')
+  box4.classList.remove('visible')
+
+  buttonOne.classList.add('clicked')
+  buttonTwo.classList.remove('clicked')
+  buttonThree.classList.remove('clicked')
+  buttonFour.classList.remove('clicked')
 })
 
-buttonBG.addEventListener('click', () => {
-  box.classList.toggle('blue')
+buttonTwo.addEventListener('click', () => {
+  box1.classList.remove('visible')
+  box2.classList.add('visible')
+  box3.classList.remove('visible')
+  box4.classList.remove('visible')
+
+  buttonOne.classList.remove('clicked')
+  buttonTwo.classList.add('clicked')
+  buttonThree.classList.remove('clicked')
+  buttonFour.classList.remove('clicked')
 })
 
-buttonRadius.addEventListener('click', () => {
-  box.classList.toggle('radius')
+buttonThree.addEventListener('click', () => {
+  box1.classList.remove('visible')
+  box2.classList.remove('visible')
+  box3.classList.add('visible')
+  box4.classList.remove('visible')
+
+  buttonOne.classList.remove('clicked')
+  buttonTwo.classList.remove('clicked')
+  buttonThree.classList.add('clicked')
+  buttonFour.classList.remove('clicked')
+})
+
+buttonFour.addEventListener('click', () => {
+  box1.classList.remove('visible')
+  box2.classList.remove('visible')
+  box3.classList.remove('visible')
+  box4.classList.add('visible')
+
+  buttonOne.classList.remove('clicked')
+  buttonTwo.classList.remove('clicked')
+  buttonThree.classList.remove('clicked')
+  buttonFour.classList.add('clicked')
 })

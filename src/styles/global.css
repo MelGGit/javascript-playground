@@ -14,20 +14,22 @@ button {
 }
 
 .box {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background: hotpink;
-  transition: all 0.5s ease-in;
+  visibility: hidden;
 }
 
-.blue {
-  background: skyblue;
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
 }
 
-.rotation {
-  transform: rotate(45deg);
+.visible {
+  visibility: visible;
 }
 
-.radius {
-  border-radius: 50%;
+.clicked {
+  background: green;
 }
