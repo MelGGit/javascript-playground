@@ -17,8 +17,17 @@ button {
   width: 200px;
   height: 200px;
   background: hotpink;
+  transition: all 0.5s ease-in;
 }
 
 .blue {
   background: skyblue;
+}
+
+.rotation {
+  transform: rotate(45deg);
+}
+
+.radius {
+  border-radius: 50%;
 }
