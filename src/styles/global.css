@@ -8,28 +8,29 @@ body {
   height: 100vh;
 }
 
-button {
-  margin: 10px;
-  padding: 2px 5px;
+header {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .box {
+  background: orange;
   width: 100px;
   height: 100px;
-  background: hotpink;
-  visibility: hidden;
 }
 
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
+.rotate {
+  transform: rotate(45deg) !important;
 }
 
-.visible {
-  visibility: visible;
+.background {
+  background: blue !important;
 }
 
-.clicked {
-  background: green;
+.radius {
+  border-radius: 50% !important;
 }
