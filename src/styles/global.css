@@ -22,15 +22,3 @@ header {
   width: 100px;
   height: 100px;
 }
-
-.rotate {
-  transform: rotate(45deg) !important;
-}
-
-.background {
-  background: blue !important;
-}
-
-.radius {
-  border-radius: 50% !important;
-}
