@@ -1,10 +1,21 @@
 const box = document.querySelector('[data-box]')
-const input = document.querySelector('[name="input-color"]')
-const form = document.querySelector('[data-form]')
+const inputOne = document.querySelector('[name="input-rot"]')
+const inputTwo = document.querySelector('[name="input-size"]')
+const inputThree = document.querySelector('[name="input-radius"]')
+const inputFour = document.querySelector('[name="input-color"]')
 
-form.addEventListener('submit', event => {
-  event.preventDefault()
-  box.style.background = input.value
-  input.value = ''
-  input.focus()
+inputOne.addEventListener('input', event => {
+  box.style.transform = 'rotate(' + inputOne.value + 'deg)'
+})
+
+inputTwo.addEventListener('input', event => {
+  box.style.transform = 'scale(' + inputTwo.value + ')'
+})
+
+inputThree.addEventListener('input', event => {
+  box.style.borderRadius = inputThree.value + '%'
+})
+
+inputFour.addEventListener('input', event => {
+  box.style.background = 'hsl(' + inputFour.value + ', 100%, 50%)'
 })
