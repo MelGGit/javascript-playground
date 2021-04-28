@@ -1,21 +1,14 @@
-const box = document.querySelector('[data-box]')
-const inputOne = document.querySelector('[name="input-rot"]')
-const inputTwo = document.querySelector('[name="input-size"]')
-const inputThree = document.querySelector('[name="input-radius"]')
-const inputFour = document.querySelector('[name="input-color"]')
+const bOne = document.querySelector('[data-b-one]')
+const bTwo = document.querySelector('[data-b-two]')
+const pOne = document.querySelector('[data-p-one]')
+const pTwo = document.querySelector('[data-p-two]')
 
-inputOne.addEventListener('input', event => {
-  box.style.transform = 'rotate(' + inputOne.value + 'deg)'
+bOne.addEventListener('click', () => {
+  pOne.classList.remove('hidden')
+  pTwo.classList.add('hidden')
 })
 
-inputTwo.addEventListener('input', event => {
-  box.style.transform = 'scale(' + inputTwo.value + ')'
-})
-
-inputThree.addEventListener('input', event => {
-  box.style.borderRadius = inputThree.value + '%'
-})
-
-inputFour.addEventListener('input', event => {
-  box.style.background = 'hsl(' + inputFour.value + ', 100%, 50%)'
+bTwo.addEventListener('click', () => {
+  pOne.classList.add('hidden')
+  pTwo.classList.remove('hidden')
 })
