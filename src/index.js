@@ -1,58 +1,55 @@
-console.clear()
-const buttonOne = document.querySelector('.button1')
-const buttonTwo = document.querySelector('.button2')
-const buttonThree = document.querySelector('.button3')
-const buttonFour = document.querySelector('.button4')
+const buttonHome = document.querySelector('.button-home')
+const buttonBookmarks = document.querySelector('.button-bookmarks')
+const buttonCreate = document.querySelector('.button-create')
+const buttonSettings = document.querySelector('.button-settings')
 
-const box1 = document.querySelector('.box1')
-const box2 = document.querySelector('.box2')
-const box3 = document.querySelector('.box3')
-const box4 = document.querySelector('.box4')
+const homePage = document.querySelector('.page-home')
+const bookmarksPage = document.querySelector('.page-bookmarks')
+const createPage = document.querySelector('.page-create')
+const settingsPage = document.querySelector('.page-settings')
 
-buttonOne.addEventListener('click', () => {
-  box1.classList.add('visible')
-  box2.classList.remove('visible')
-  box3.classList.remove('visible')
-  box4.classList.remove('visible')
+buttonHome.addEventListener('click', () => {
+  hideAllPages()
+  homePage.classList.remove('hidden')
 
-  buttonOne.classList.add('clicked')
-  buttonTwo.classList.remove('clicked')
-  buttonThree.classList.remove('clicked')
-  buttonFour.classList.remove('clicked')
+  deactivateButtons()
+  buttonHome.classList.add('active')
 })
 
-buttonTwo.addEventListener('click', () => {
-  box1.classList.remove('visible')
-  box2.classList.add('visible')
-  box3.classList.remove('visible')
-  box4.classList.remove('visible')
+buttonBookmarks.addEventListener('click', () => {
+  hideAllPages()
+  bookmarksPage.classList.remove('hidden')
 
-  buttonOne.classList.remove('clicked')
-  buttonTwo.classList.add('clicked')
-  buttonThree.classList.remove('clicked')
-  buttonFour.classList.remove('clicked')
+  deactivateButtons()
+  buttonBookmarks.classList.add('active')
 })
 
-buttonThree.addEventListener('click', () => {
-  box1.classList.remove('visible')
-  box2.classList.remove('visible')
-  box3.classList.add('visible')
-  box4.classList.remove('visible')
+buttonCreate.addEventListener('click', () => {
+  hideAllPages()
+  createPage.classList.remove('hidden')
 
-  buttonOne.classList.remove('clicked')
-  buttonTwo.classList.remove('clicked')
-  buttonThree.classList.add('clicked')
-  buttonFour.classList.remove('clicked')
+  deactivateButtons()
+  buttonCreate.classList.add('active')
 })
 
-buttonFour.addEventListener('click', () => {
-  box1.classList.remove('visible')
-  box2.classList.remove('visible')
-  box3.classList.remove('visible')
-  box4.classList.add('visible')
+buttonSettings.addEventListener('click', () => {
+  hideAllPages()
+  settingsPage.classList.remove('hidden')
 
-  buttonOne.classList.remove('clicked')
-  buttonTwo.classList.remove('clicked')
-  buttonThree.classList.remove('clicked')
-  buttonFour.classList.add('clicked')
+  deactivateButtons()
+  buttonSettings.classList.add('active')
 })
+
+function hideAllPages() {
+  homePage.classList.add('hidden')
+  bookmarksPage.classList.add('hidden')
+  createPage.classList.add('hidden')
+  settingsPage.classList.add('hidden')
+}
+
+function deactivateButtons() {
+  buttonHome.classList.remove('active')
+  buttonBookmarks.classList.remove('active')
+  buttonCreate.classList.remove('active')
+  buttonSettings.classList.remove('active')
+}
