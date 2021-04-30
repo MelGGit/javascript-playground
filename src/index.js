@@ -1,12 +1,14 @@
-const buttonHome = document.querySelector('.button-home')
-const buttonBookmarks = document.querySelector('.button-bookmarks')
-const buttonCreate = document.querySelector('.button-create')
-const buttonSettings = document.querySelector('.button-settings')
+import getElement from './utils/getElement'
 
-const homePage = document.querySelector('.page-home')
-const bookmarksPage = document.querySelector('.page-bookmarks')
-const createPage = document.querySelector('.page-create')
-const settingsPage = document.querySelector('.page-settings')
+const buttonHome = getElement('.button-home')
+const buttonBookmarks = getElement('.button-bookmarks')
+const buttonCreate = getElement('.button-create')
+const buttonSettings = getElement('.button-settings')
+
+const homePage = getElement('.page-home')
+const bookmarksPage = getElement('.page-bookmarks')
+const createPage = getElement('.page-create')
+const settingsPage = getElement('.page-settings')
 
 buttonHome.addEventListener('click', navigateToHome)
 buttonBookmarks.addEventListener('click', navigateToBookmarks)
