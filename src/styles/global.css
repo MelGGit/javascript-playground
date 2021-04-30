@@ -4,25 +4,14 @@
 
 body {
   display: grid;
-  grid-template-rows: auto 48px;
-  height: 100vh;
+  grid-template-columns: repeat(auto-fit, 100px);
+  gap: 20px;
 }
 
-main[class^='page'] {
+.box {
+  height: 100px;
+  width: 100px;
   background: steelblue;
-  display: grid;
-  place-items: center;
-}
-
-button {
-  border: none;
-}
-
-.navigation {
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(4, 1fr);
-  background: #ccc;
 }
 
 .active {
